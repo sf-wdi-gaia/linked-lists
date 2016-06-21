@@ -1,14 +1,23 @@
 # Linked Lists
 
+#### Objectives:
+
+* Describe singly-linked and doubly-linked linked lists
+* Compare and contrast linked lists with other data structures (stacks, queues, arrays)
+* Write your own linked list methods in javascript (and/or Ruby!)
+* Solve interview questions with linked lists
+
 ## What are linked lists?
 
 ![linked list image from wikipedia](https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Singly-linked-list.svg/640px-Singly-linked-list.svg.png)
+
+A linked-list is a primitive data structure that can be used to create stacks and queues.
 
 Linked lists store sequential (ordered) data in a series of "nodes".  Each node in a linked list contains some value and a reference or "pointer" to the next node.  If the linked list is "doubly linked", each node will also have another pointer to the previous node.  Linked lists that only have pointers to the next node are called "singly linked."
 
 The very last node of a linked list, called the tail, has a null next node because nothing comes after it.  The very first node is called the head. The head will always have a null previous node (assuming the list is doubly linked) because nothing comes before the head.
 
-Singly linked lists look a lot like trees, except each node can only have at most one child.
+Singly linked lists look a lot like binary trees, except each node can only have at most one child.
 
 If you're asked an interview question about a linked list, make sure to clarify whether it's singly linked (only next node pointers) or doubly linked (both next and previous node pointers). We'll focus on singly linked lists.
 
@@ -44,9 +53,19 @@ On the other hand...
 * **implementing stacks and queues** Linked lists are a natural choice for these data structures that need fast access to beginning or end of a list... much more natural than arrays.
 
 
-## GA Challenges (Advanced)
+#### Pros and Cons of Linked Lists
 
-For those who are feeling warmed up and ready for a challenge, we give you the List prototype with the following methods:
+Pros | Cons
+---- | ----
+Dynamic – LL’s allocate the needed memory when the program is initiated and can can expand in real time without memory overload. | Since each element holds a value and a pointer, it’s more memory intensive.
+Insertion and deletion is easy. | You have to access nodes sequentially since that’s how they’re defined; furthermore they’re not stored continuously so it takes longer to access an element.
+It’s easy to build linear data structures such as stacks and queues with linked lists. | With a singly-linked list it’s pretty much terrible to reverse traverse. Doubly-linked lists contain a pointer to the previous node as well but that’s even more memory intensive.
+
+
+## GA Challenges
+In Ruby it makes most sense to use arrays due to built-in methods such as `shift`, `unshift`, `enq`, `deq`, `push` and `pop`, but it is helpful to know why linked lists can be beneficial. The challenges below should be attempted in Javascript.
+
+When you're ready for the challenge, we give you the List prototype with the following methods:
 1. `makeNode()`
 1. `addAtEnd()`
 1. `print()`
@@ -62,7 +81,4 @@ Your mission should you choose to accept it is to Implement the following:
 1. `insertAt()`
 1. `delete()`
 
-#### A Different Approach (Intermediate)
-
-We found a great article online that goes through this in great detail. For those who are not up for the GA Challenges, I recommend reading through the article and trying to implement each step on your own or with a partner. Try NOT to peek at the answers until you've tried to write something.
 
