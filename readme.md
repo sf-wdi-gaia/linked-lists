@@ -66,6 +66,7 @@ It’s easy to build linear data structures such as stacks and queues with linke
 In Ruby it makes most sense to use arrays due to built-in methods such as `shift`, `unshift`, `enq`, `deq`, `push` and `pop`, but it is helpful to know why linked lists can be beneficial. The challenges below should be attempted in Javascript.
 
 When you're ready for the challenge, we give you the List prototype with the following methods:
+
 1. `makeNode()`
 1. `addAtEnd()`
 1. `print()`
