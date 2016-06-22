@@ -16,13 +16,7 @@ describe LinkedList do
         subject(:second) { LinkedList.new("Second")}
         it "should create a new instance of class LinkedList" do
             expect(second.head.val).to eq("Second")
-        end
-        
-        # describe "#add" do
-        #     it "should add a value to an instance of class LinkedList" do
-        #         expect(second.add("Third").head.val).to eq("Third")
-        #     end
-        # end    
+        end  
     end
 
 end
