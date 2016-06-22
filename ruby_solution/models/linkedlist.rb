@@ -1,5 +1,7 @@
 class LinkedList
 
+  attr_reader :head
+  
   def initialize(val)
     @head = Node.new(val, nil)
   end
